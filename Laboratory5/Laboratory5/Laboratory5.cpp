@@ -53,6 +53,9 @@ int main()
     }
     i = 0;
     flag = false;
+    cout << "Исходная строка: " << curr << endl;
+    cout << "Полученная строка: " << ans << endl;
+    cout << "Адреса: ";
     while (curr[i] != '\0') {
         if (curr[i] != 'e') {
             flag = false;
@@ -60,10 +63,10 @@ int main()
         else {
             if (curr[i] == 'e') {
                 if (flag) {
-                    while ((curr[i] != ' ') && (i != -1)) {
+                    while ((curr[i] != ' ') && (i != 0)) {
                         i--;
                     }
-                    deleted[k] = &curr[i + 1];
+                    printf("%p ", &curr[i]);
                     k++;
                     i++;
                     while ((curr[i] != ' ') && (curr[i] != '\0')) {
@@ -77,13 +80,12 @@ int main()
         }
         i++;
     }
-    cout << "Исходная строка: " << curr << endl;
-    cout << "Полученная строка: " << ans << endl;
-    cout << "Адрес(a): ";
-    for (i = 0; i < j; i++) {
-        //printf_s('%c ', deleted[i]);
-        cout << &deleted[i] << ' ';
-    }
+
+    //cout << "Адрес(a): ";
+    //for (i = 0; i < j; i++) {
+    //    //printf_s('%c ', deleted[i]);
+    //    cout << &deleted[i] << ' ';
+    //}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
