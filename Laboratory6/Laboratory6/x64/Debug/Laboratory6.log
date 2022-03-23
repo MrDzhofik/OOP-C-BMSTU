@@ -1,0 +1,7 @@
+﻿  Laboratory6.cpp
+C:\Users\djafa\source\repos\Laboratory6\Laboratory6\Laboratory6.cpp(99,36): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\Users\djafa\source\repos\Laboratory6\Laboratory6\Laboratory6.cpp(99,36): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+C:\Users\djafa\source\repos\Laboratory6\Laboratory6\Laboratory6.cpp(16,12): warning C4101: a: неиспользованная локальная переменная
+C:\Users\djafa\source\repos\Laboratory6\Laboratory6\Laboratory6.cpp(17,13): warning C4101: b: неиспользованная локальная переменная
+C:\Users\djafa\source\repos\Laboratory6\Laboratory6\Laboratory6.cpp(16,35): warning C4101: last: неиспользованная локальная переменная
+  Laboratory6.vcxproj -> C:\Users\djafa\source\repos\Laboratory6\x64\Debug\Laboratory6.exe
