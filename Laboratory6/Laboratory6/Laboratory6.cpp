@@ -96,7 +96,7 @@ int main()
             sum += (temp_int % 10);
             temp_int /= 10;
         }
-        printf("%-4d ", sum, strlen(p->mas));
+        printf("%-4d ", sum);
         f = f->ptri;
         p = p->ptrc;
         sum = 0;

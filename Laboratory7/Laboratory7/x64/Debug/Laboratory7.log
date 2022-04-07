@@ -1,0 +1,5 @@
+﻿  Laboratory7.cpp
+C:\Users\djafa\source\repos\Laboratory7\Laboratory7\Bonus_card.h(25,23): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\Laboratory7\Laboratory7\Bonus_card.h(29,26): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\djafa\source\repos\Laboratory7\Laboratory7\Bonus_card.h(33,23): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Laboratory7.vcxproj -> C:\Users\djafa\source\repos\Laboratory7\x64\Debug\Laboratory7.exe

@@ -1,0 +1,6 @@
+﻿  DZ1-C++.cpp
+C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(13,41): error C2664: "errno_t _ecvt_s(char *,size_t,double,int,int *,int *)": невозможно преобразовать аргумент 5 из "int" в "int *"
+C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(13,37): message : Для преобразования из целого типа в указатель требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(741,26): message : см. объявление "_ecvt_s"
+C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(14,29): error C2660: strcat_s: функция не принимает 2 аргументов
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(39,30): message : см. объявление "strcat_s"
