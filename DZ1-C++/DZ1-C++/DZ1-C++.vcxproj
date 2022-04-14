@@ -24,6 +24,7 @@
     <ProjectGuid>{8eb29294-a3e1-4f5e-b352-ccfceb3d240e}</ProjectGuid>
     <RootNamespace>DZ1C</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>DZ2-C++</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

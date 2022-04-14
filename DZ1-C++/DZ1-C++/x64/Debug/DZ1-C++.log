@@ -1,6 +1,3 @@
-﻿  DZ1-C++.cpp
-C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(13,41): error C2664: "errno_t _ecvt_s(char *,size_t,double,int,int *,int *)": невозможно преобразовать аргумент 5 из "int" в "int *"
-C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(13,37): message : Для преобразования из целого типа в указатель требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(741,26): message : см. объявление "_ecvt_s"
-C:\Users\djafa\source\repos\DZ1-C++\DZ1-C++\DZ1-C++.cpp(14,29): error C2660: strcat_s: функция не принимает 2 аргументов
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\string.h(39,30): message : см. объявление "strcat_s"
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (DZ1-C++.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  DZ1-C++.cpp
+  DZ1-C++.vcxproj -> C:\Users\djafa\source\repos\DZ1-C++\x64\Debug\DZ2-C++.exe

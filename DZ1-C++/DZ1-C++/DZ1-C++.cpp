@@ -1,38 +1,84 @@
-﻿// DZ1-C++.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include "conio.h"
+#include "locale.h"
+
+using namespace std;
 
 
-int dec_to_bin(int number, char ans[25]) {
-    int temp{};
-    char* temp_s{};
-    while (number != 0) {
-        temp = number % 2;
-        _ecvt_s(temp_s, 2, temp, 2, 1, 1);
-        strcat_s(ans, temp_s);
-    }
-    return 0;
-}
-int main()
-{
-    char ans[25]{};
-    int n;
-    std :: cin >> n;
-    dec_to_bin(n, ans);
-    printf("%d\n", n);
-    dec_to_bin(n, ans);
-    printf("%s", ans);
-}
+// 1) Функции
+//
+//int get_size_2(int number){
+//    int size = 0;
+//    while (number != 0) {
+//        size++;
+//        number /= 2;
+//    }
+//    return size;
+//}
+//
+//int get_size_10(int number){
+//    int size{};
+//    while (number != 0) {
+//        size++;
+//        number /= 10;
+//    }
+//    return size;
+//}
+//
+//void digit(int number, int numeral[]) {
+//    int i = 0;
+//    while (number != 0) {
+//        numeral[i] = (number % 10);
+//        i++;
+//        number /= 10;
+//    }
+//}
+//
+//int check(int *one, int size) {
+//    for (int i = 0; i < size / 2; i++) {
+//        if (one[i] != one[size - i - 1]) {
+//            return false;
+//        }
+//    }
+//    return true;
+//}
+//
+//void reverse(int one[], int res[], int size) {
+//    for (int i = size; i > 0; i--) {
+//        res[size - i] = one[i - 1];
+//    }
+//}
+//
+//void dec_to_bin(int number, int ans[]) {
+//    int temp{}, res[25]{}, i = 0;
+//    while (number != 0) {
+//        temp = number % 2;
+//        ans[i] = temp;
+//        i++;
+//        number /= 2;
+//    }
+//}
+//
+//int main()
+//{
+//    setlocale(0, "russian");
+//    int num[25]{}, dig[10], norm_num[25];
+//    int n, size_2 = 0, size_10 = 0;
+//    cin >> n;
+//    for (int i = n; i > 0; i--) {
+//        dec_to_bin(i, num);
+//        digit(i, dig);
+//        size_2 = get_size_2(i);
+//        size_10 = get_size_10(i);
+//        reverse(num, norm_num, size_2);
+//        if (check(dig, size_10) && check(norm_num, size_2)) {
+//            printf("%d - ", i);
+//            for (int i = 0; i < size_2; i++) {
+//                printf("%d", norm_num[i]);
+//            }
+//            printf("\n");
+//        }
+//    }
+//}
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+// 3) Файлы
