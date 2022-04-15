@@ -1,6 +1,9 @@
 ﻿#include <iostream>
 #include "conio.h"
 #include "locale.h"
+#include "stdio.h"
+#include "time.h"
+
 
 using namespace std;
 
@@ -81,4 +84,41 @@ using namespace std;
 //    }
 //}
 
-// 3) Файлы
+
+// 3) Files
+int main() {
+	FILE* f{}, * h{};
+	int n = 0, l = 0;
+	char ch{}, temp{};
+	const char *alphabet = "abcdaeafghajaakalamanoapqarasatuvawxyaz";
+	scanf_s("%d", &n);
+	srand((unsigned)time(NULL));
+	fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "w");
+	puts("First file");
+	for (int i = 0; i < n; i++) {
+		fputs(alphabet + (rand() % 48), f);
+	}
+	fclose(f);
+	fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "r");
+	for (int i = 0; i < n; i++) {
+		ch = getc(f);
+		putchar(ch);
+	}
+	rewind(f);
+	puts("\n");
+	puts("Second file:");
+	fopen_s(&h, "C://Users//djafa//source//repos//DZ1-C++//last.txt", "w");
+	for (int i = 0; i < n - 1; i++) {
+		ch = getc(f);
+		temp = getc(f);
+		if (temp == 'a') {
+			fputs(&ch, h);
+			l++;
+			printf("%c", ch);
+		}
+		fseek(f, -1, 1);
+	}
+	fclose(h);
+	printf("\nSymbols before a: %d", l);
+}
+
