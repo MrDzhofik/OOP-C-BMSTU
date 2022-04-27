@@ -32,19 +32,37 @@
 
 //}
 
+#/*include <iostream>
+using namespace std;
+int main() {*/
+    //int arr[5] = { 1, 2, 3, 4, 5 };
+    //for (int& x : arr) {
+    //    x *= 2;
+    //}
+    //for (auto x : arr)
+    //    cout << x << ' ';
+    //for (const auto& x : arr)
+    //    cout << x << ' ';
+    //return 0;
 #include <iostream>
 using namespace std;
+class A {
+private:
+    int x;
+public:
+    A(int a) { x = a; cout << "A(int) // x=" << x << endl; }
+    void f() { cout << "f() // x=" << x << endl; }
+    void f() const { cout << "f() const // x=" << x << endl; }
+};
 int main() {
-    int arr[5] = { 1, 2, 3, 4, 5 };
-    for (int& x : arr) {
-        x *= 2;
-    }
-    for (auto x : arr)
-        cout << x << ' ';
-    for (const auto& x : arr)
-        cout << x << ' ';
+    A a1(1);
+    a1.f();
+    A const a2(2);
+    a2.f();
     return 0;
 }
+
+//}
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
