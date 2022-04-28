@@ -11,7 +11,6 @@ using namespace std;
 
 
 // 1) Функции
-//
 int get_size_2(int number){
     int size = 0;
     while (number != 0) {
@@ -66,28 +65,28 @@ void dec_to_bin(int number, int ans[]) {
 
 //int main()
 //{
-    /*setlocale(0, "russian");*/
-    /*int num[25]{}, dig[10], norm_num[25];
-    int n, size_2 = 0, size_10 = 0;*/
-    /*cout << "Введите число, от которого будем искать палиндромы: ";
-    cin >> n;
-    for (int i = n; i > 0; i--) {
-        dec_to_bin(i, num);
-        digit(i, dig);
-        size_2 = get_size_2(i);
-        size_10 = get_size_10(i);
-        reverse(num, norm_num, size_2);
-        if (check(dig, size_10) && check(norm_num, size_2)) {
-            printf("%d - ", i);
-            for (int i = 0; i < size_2; i++) {
-                printf("%d", norm_num[i]);
-            }
-            printf("\n");
-        }
-    }*/
+//    setlocale(0, "russian");
+//    int num[25]{}, dig[10], norm_num[25];
+//    int n, size_2 = 0, size_10 = 0;
+//    cout << "Введите число, от которого будем искать палиндромы: ";
+//    cin >> n;
+//    for (int i = n; i > 0; i--) {
+//        dec_to_bin(i, num);
+//        digit(i, dig);
+//        size_2 = get_size_2(i);
+//        size_10 = get_size_10(i);
+//        reverse(num, norm_num, size_2);
+//        if (check(dig, size_10) && check(norm_num, size_2)) {
+//            printf("%d - ", i);
+//            for (int i = 0; i < size_2; i++) {
+//                printf("%d", norm_num[i]);
+//            }
+//            printf("\n");
+//        }
+//    }
 //}
  
-int check (char bukva) {
+/*int check(char bukva) {
     char book[53] = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
     char number[11] = "1234567890";
     char symbol[4] = "+-*";
@@ -145,81 +144,45 @@ int main() {
         group_num = 0;
         group_spec = 0;
         ans[0] = '\0';
-    }
-    /*char str[30]{}, str1[30]{}, s[2]{};
-    char num[] = "123";
-    int m = 0;
-    while ((puts("Enter string or end:"), strcmp(gets_s(str, 29), "end") != 0)) {
-        for (int i = 0; i < strlen(str); i++) {
-            if (check(str[i]) == 1) if ((i == 0) || (check(str[i - 1]) != 1)) {
-                m++;
-            }
-            if (check(str[i]) == 3) if ((i == 0) || (check(str[i - 1]) != 3)) {
-                m--;
-            }
-         }
-         if (m > 0) {
-             puts("+");
-             for (int i = 0; i < strlen(str); i++) {
-                 if (check(str[i]) == 3) {
-                     if ((i == 0) || (check(str[i - 1]) != 3)) {
-                        strcat_s(str1, num);
-                     }
-                     if ((check(str[i]) == 1) || (check(str[i]) == 2)) {
-                         s[0] = str[i];
-                         strcat_s(str1, s);
-                     }
-                 }
-             }
-         }
-         else {
-            puts("-");
-            strcat_s(str1, str);
-         }
-         printf("%s\n", str);
-         printf("%s\n", str1);
-         str1[0] = '\0';
-         printf("\n");
-         m = 0;
-    }
-    return 0;*/
-}
+    }   
+}*/
 
 
 // 3) Files
-//int main() {
-	/*FILE* f{}, * h{};
-	int l = 0;
-	char ch{}, temp{};
-	const char *alphabet = "abcdaeafghajaakalamanoapqarasatuvawxyaz";
-	printf("Введите число символов, которые запишутся в файл: ");
-	scanf_s("%d", &n);
-	srand((unsigned)time(NULL));
-	fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "w");
-	puts("Первый файл");
-	for (int i = 0; i < n; i++) {
-		fputs(alphabet + (rand() % 48), f);
-	}
-	fclose(f);
-	fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "r");
-	for (int i = 0; i < n; i++) {
-		ch = getc(f);
-		putchar(ch);
-	}
-	rewind(f);
-	puts("\n");
-	puts("Второй файл:");
-	fopen_s(&h, "C://Users//djafa//source//repos//DZ1-C++//last.txt", "w");
-	for (int i = 0; i < n - 1; i++) {
-		ch = getc(f);
-		temp = getc(f);
-		if (temp == 'a') {
-			fputs(&ch, h);
-			l++;
-			printf("%c", ch);
-		}
-		fseek(f, -1, 1);
-	}
-	fclose(h);
-	printf("\nСимволов перед a: %d", l);*/
-
+int main() {
+    FILE* f{}, * h{};
+    int l = 0, n = 0;
+    char ch{}, temp{};
+    setlocale(0, "russian");
+    printf("Введите число символов, которые запишутся в файл: ");
+    const char* alphabet = "abcdaeafghajaakalamanoapqarasatuvawxyaz";
+    scanf_s("%d", &n);
+    srand((unsigned)time(NULL));
+    fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "w");
+    puts("Первый файл");
+    for (int i = 0; i < n; i++) {
+        fputs(alphabet + (rand() % 48), f);
+    }
+    fclose(f);
+    fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "r");
+    for (int i = 0; i < n; i++) {
+        ch = getc(f);
+        putchar(ch);
+    }
+    rewind(f);
+    puts("\n");
+    puts("Второй файл:");
+    fopen_s(&h, "C://Users//djafa//source//repos//DZ1-C++//last.txt", "w");
+    for (int i = 0; i < n - 1; i++) {
+        ch = getc(f);
+        temp = getc(f);
+        if (ch == 'a') {
+            fputs(&temp, h);
+            l++;
+            printf("%c", temp);
+        }
+        fseek(f, -1, 1);
+    }
+    fclose(h);
+    printf("\nСимволов перед a: %d", l);
+}

@@ -17,7 +17,7 @@ public:
 	}
 	float Square() {
 		float sq;
-		sq = 2 * 3.14 * ((diam / 2.0) * (diam / 2.0));
+		sq = 3.14 * ((diam / 2.0) * (diam / 2.0));
 		return sq;
 	}
 };

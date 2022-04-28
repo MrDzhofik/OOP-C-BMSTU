@@ -1,5 +1,5 @@
 ﻿  Laboratory8.cpp
-C:\Users\djafa\source\repos\Laboratory8\Laboratory8\Circle.h(20,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\Laboratory8\Laboratory8\Circle.h(20,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
 C:\Users\djafa\source\repos\Laboratory8\Laboratory8\Circle.h(42,18): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 C:\Users\djafa\source\repos\Laboratory8\Laboratory8\Laboratory8.cpp(12,20): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\djafa\source\repos\Laboratory8\Laboratory8\Laboratory8.cpp(13,25): warning C4305: аргумент: усечение из "double" в "float"
