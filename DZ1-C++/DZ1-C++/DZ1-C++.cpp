@@ -158,13 +158,13 @@ int main() {
     const char* alphabet = "abcdaeafghajaakalamanoapqarasatuvawxyaz";
     scanf_s("%d", &n);
     srand((unsigned)time(NULL));
-    fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "w");
+    fopen_s(&f, "C://Users//djafa//source//repos//OOP-C-BMSTU//DZ1-C++//first.txt", "w");
     puts("Первый файл");
     for (int i = 0; i < n; i++) {
         fputs(alphabet + (rand() % 48), f);
     }
     fclose(f);
-    fopen_s(&f, "C://Users//djafa//source//repos//DZ1-C++//first.txt", "r");
+    fopen_s(&f, "C://Users//djafa//source//repos//OOP-C-BMSTU//DZ1-C++//first.txt", "r");
     for (int i = 0; i < n; i++) {
         ch = getc(f);
         putchar(ch);
@@ -172,7 +172,7 @@ int main() {
     rewind(f);
     puts("\n");
     puts("Второй файл:");
-    fopen_s(&h, "C://Users//djafa//source//repos//DZ1-C++//last.txt", "w");
+    fopen_s(&h, "C://Users//djafa//source//repos//OOP-C-BMSTU//DZ1-C++//last.txt", "w");
     for (int i = 0; i < n - 1; i++) {
         ch = getc(f);
         temp = getc(f);
