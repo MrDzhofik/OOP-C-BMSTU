@@ -1,4 +1,5 @@
 QT       += core gui
+QT += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,7 +11,9 @@ CONFIG += c++17
 
 SOURCES += \
     add.cpp \
+    benefit.cpp \
     delete.cpp \
+    histogramm.cpp \
     main.cpp \
     mainwindow.cpp \
     max.cpp \
@@ -19,8 +22,11 @@ SOURCES += \
     sum.cpp
 
 HEADERS += \
+    Structure.h \
     add.h \
+    benefit.h \
     delete.h \
+    histogramm.h \
     mainwindow.h \
     max.h \
     other.h \
@@ -29,7 +35,9 @@ HEADERS += \
 
 FORMS += \
     add.ui \
+    benefit.ui \
     delete.ui \
+    histogramm.ui \
     mainwindow.ui \
     max.ui \
     other.ui \

@@ -6,31 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>543</width>
+    <height>293</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>331</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>260</y>
+     <x>360</x>
+     <y>250</y>
      <width>175</width>
      <height>31</height>
     </rect>
@@ -52,13 +39,43 @@
     </item>
    </layout>
   </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>531</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="rowCount">
+    <number>10</number>
+   </property>
+   <property name="columnCount">
+    <number>4</number>
+   </property>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+  </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
    <sender>ExitButton</sender>
    <signal>clicked(bool)</signal>
-   <receiver>ExitButton</receiver>
+   <receiver>Print</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -66,8 +83,8 @@
      <y>274</y>
     </hint>
     <hint type="destinationlabel">
-     <x>331</x>
-     <y>274</y>
+     <x>199</x>
+     <y>149</y>
     </hint>
    </hints>
   </connection>

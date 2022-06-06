@@ -24,7 +24,7 @@ public:
         num = 0;
         st = nullptr;
     }
-    virtual void Print(){
+    void Print() override{
         printf("%d", num);
         printf("%s", st);
     };
@@ -34,7 +34,9 @@ public:
 };
 
 class TSpisok{
+protected:
     int len;
+    TStNum *first, *last, *curr;
 public:
     TSpisok(){
         len = 0;
@@ -53,8 +55,18 @@ public:
     void pop_right();
     void pop();
     void Print();
-private:
-    TStNum *first, *last, *curr;
+    virtual ~TSpisok(){
+        delete first;
+        delete last;
+        delete curr;
+    };
+};
+
+class TSpisokSum : public TSpisok{
+public:
+    TSpisokSum(void): TSpisok(){};
+    ~TSpisokSum();
+    int Sum();
 };
 
 

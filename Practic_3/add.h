@@ -18,6 +18,8 @@ public:
 private slots:
     void on_AddButton_clicked(bool checked);
 
+    void on_ExitButton_clicked(bool checked);
+
 private:
     Ui::Add *ui;
 };

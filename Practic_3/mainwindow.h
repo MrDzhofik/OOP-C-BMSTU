@@ -4,10 +4,15 @@
 #include <QMainWindow>
 #include <QString>
 #include <QMessageBox>
+#include <QFile>
+#include "string.h"
 #include "add.h"
 #include "delete.h"
 #include "other.h"
 #include "print.h"
+#include "Structure.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,7 +27,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    FILE *fil;
+    bool readrec();
+    Product record;
     Add *add;
     Delete *del;
     Other *other;
@@ -41,12 +47,7 @@ private:
     Ui::MainWindow *ui;
 };
 
-typedef struct{
-    QString name;
-    QString provider;
-    int quantity;
-    int price;
-} Product;
+
 
 
 void show_message(const char* text);

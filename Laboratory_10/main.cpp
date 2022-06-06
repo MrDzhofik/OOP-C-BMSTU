@@ -1,6 +1,6 @@
 #include "mainwindow.h"
-#include "main_form.ui"
 #include "Elements.h"
+#include "ContainerWidget.h"
 
 #include <QApplication>
 #include <QLocale>
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    MainWindow w;
-    w.show();
+    ContainerWidget *w = new ContainerWidget();
+    w->show();
     return a.exec();
 }

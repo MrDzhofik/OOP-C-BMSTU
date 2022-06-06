@@ -1,2 +1,13 @@
 ﻿  Practic2.cpp
-  Practic2.vcxproj -> C:\Users\djafa\source\repos\Practic2\x64\Debug\Practic2.exe
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(31,16): warning C4476: "printf": неизвестный символ поля типа "|" в описателе формата
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(31,28): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(31,28): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(81,27): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(81,24): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(85,28): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(85,25): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(89,29): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(89,26): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(93,29): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\Practic2\Practic2.cpp(93,26): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Practic2.vcxproj -> C:\Users\djafa\source\repos\OOP-C-BMSTU\Practic2\x64\Debug\Practic2.exe

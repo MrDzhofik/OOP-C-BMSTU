@@ -88,3 +88,13 @@ void TSpisok::Print(){
     }
 }
 
+int TSpisokSum::Sum(){
+    int sum = 0;
+    curr = first;
+    while (curr != nullptr){
+        sum += curr->num;
+        curr = (TStNum*)curr->next;
+    }
+    return sum;
+}
+

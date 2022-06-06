@@ -9,12 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AddWidget.cpp \
+    ContainerWidget.cpp \
+    DeleteWidget.cpp \
     Elements.cpp \
+    PrintWIdget.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    AddWidget.h \
+    ContainerWidget.h \
+    DeleteWidget.h \
     Elements.h \
+    PrintWidget.h \
     mainwindow.h
 
 FORMS += \

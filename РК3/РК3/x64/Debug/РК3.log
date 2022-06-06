@@ -1,4 +1,7 @@
 ﻿  Class.cpp
-C:\Users\djafa\source\repos\РК3\РК3\Class.cpp(26): warning C4172: возвращение адреса локальной или временной переменной : str
-C:\Users\djafa\source\repos\РК3\РК3\Class.cpp(33): warning C4172: возвращение адреса локальной или временной переменной : str
-  РК3.vcxproj -> C:\Users\djafa\source\repos\РК3\x64\Debug\РК3.exe
+  РК3.cpp
+  Создание кода...
+C:\Users\djafa\source\repos\OOP-C-BMSTU\РК3\РК3\Class.cpp(33): warning C4172: возвращение адреса локальной или временной переменной : str
+C:\Users\djafa\source\repos\OOP-C-BMSTU\РК3\РК3\Class.cpp(26): warning C4172: возвращение адреса локальной или временной переменной : str
+  LINK : не найден или не выполнена сборка C:\Users\djafa\source\repos\OOP-C-BMSTU\РК3\x64\Debug\РК3.exe при последней инкрементной компоновке; выполняется полная компоновка
+  РК3.vcxproj -> C:\Users\djafa\source\repos\OOP-C-BMSTU\РК3\x64\Debug\РК3.exe

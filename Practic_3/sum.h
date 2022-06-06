@@ -15,6 +15,11 @@ public:
     explicit Sum(QWidget *parent = nullptr);
     ~Sum();
 
+private slots:
+    void on_SumButton_clicked(bool checked);
+
+    void on_ExitButton_clicked(bool checked);
+
 private:
     Ui::Sum *ui;
 };

@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     del = new Delete();
     other = new Other();
     print = new Print();
+    setWindowTitle("Базар");
 }
 
 MainWindow::~MainWindow()
@@ -47,4 +48,22 @@ void MainWindow::on_PrinButton_clicked(bool checked)
 {
     print->show();
 }
+
+bool MainWindow::readrec(){
+    QFile fil("C:\\Users\\djafa\\source\\repos\\OOP-C-BMSTU\\Practic_3\\Market.dat");
+    fil.open(QIODevice::ReadOnly);
+    fil.seek(0);
+    QDataStream in(&fil); // связываем с файлом поток ввода
+    if (in.atEnd()) {
+        return false;
+    }
+
+    else
+    {
+        in>>record.name>>record.provider>>record.quantity>>record.price;
+        return true;
+    }
+}
+
+
 

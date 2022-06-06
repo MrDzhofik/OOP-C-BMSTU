@@ -15,6 +15,11 @@ public:
     explicit Max(QWidget *parent = nullptr);
     ~Max();
 
+private slots:
+    void on_maxButton_clicked(bool checked);
+
+    void on_exitButton_clicked(bool checked);
+
 private:
     Ui::Max *ui;
 };

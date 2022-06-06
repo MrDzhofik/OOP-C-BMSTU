@@ -5,36 +5,100 @@
 #include "stdio.h"
 #include "string.h"
 #include "locale.h"
+#include <cmath>
 
-void interval() {
-    puts("Введите интервал или 0 0 для завершения:");
+void yx(float a, float b) {
+    printf("x");
+    for (float i = a; i < b; i++) {
+        printf("%6.2f", i);
+    }
+    puts("\n-------------------------------------------------------------------");
+    printf("y");
+    for (float i = a; i < b; i++) {
+        printf("%6.2f", i);
+    };
+    puts("\n");
 }
 
-void select_func() {
-    puts("Выберите функцию: \n1) y = kx + b \n2) y = ax^2 + bx + c \n3) sin(x) \n4) cos(x) \n 5) Назад");
+void yx2(float a, float b) {
+    printf("x");
+    for (float i = a; i < b; i++) {
+        printf("%8.2f", i);
+    }
+    puts("\n-------------------------------------------------------------------");
+    printf("y");
+    for (float i = a; i < b; i++) {
+        printf("%8.2f", i*i);
+    };
+    puts("\n");
 }
 
-void select_oper() {
-    puts("Выберите операцию: \n1) Преобразование во внутреннее представление\n2) Вычисление заданной функции на заданном интервале\n3) Назад");
+void cosx(float a, float b) {
+    printf("x");
+    for (float i = a; i < b; i++) {
+        printf("%8.2f", i);
+    }
+    puts("\n--------------------------------------------");
+    printf("y");
+    for (float i = a; i < b; i++) {
+        printf("%8.2f", cos(i));
+    };
+    puts("\n");
+}
+
+void sinx(float a, float b){
+    printf("x");
+    for (float i = a; i < b; i++) {
+        printf("%7.2f", i);
+    }
+    puts("\n---------------------------------------------");
+    printf("y");
+    for (float i = a; i < b; i++) {
+        printf("%7.2f", sin(i));
+    };
+    puts("\n");
 }
 
 int main()
 {
-    float a = 0, b = 0;
+    int a = 1, b = 2;
     int select_fun = 0, select_op = 0;
     setlocale(0, "russian");
-    interval();
-    scanf_s("%f %f", &a, &b);
-    while ((a != 0) && (b != 0)) {
-        select_func();
-        scanf_s("%d", &select_fun);
-        if (select_fun == 5) {
+    while ((a != 0) || (b != 0)) {
+        puts("Введите интервал");
+        scanf_s("%d %d", &a, &b);
+        puts("Выберите функцию: \n1) y = x \n2) y = x^2 \n3) sin(x) \n4) cos(x) \n5) Выход");
+        scanf_s("%d", &select_op);
+        if (select_op == 5) {
             puts("На этом наши полномочия все");
+            return 0;
         }
-
+        puts("Выберите операцию:\n1) Вычисление заданной функции на заданном интервале");
+        scanf_s("%d", &select_fun);
+        switch (select_fun) {
+            case 1:
+                if (select_op == 1) {
+                    yx(a, b);
+                    continue;
+                }
+                else if (select_op == 2) {
+                    yx2(a, b);
+                    continue;
+                }
+                else if (select_op == 3) {
+                    sinx(a, b);
+                    continue;
+                }
+                else if (select_op == 4) {
+                    cosx(a, b);
+                    continue;
+                }
+            default:
+                continue;
+        }
     }
     
-
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

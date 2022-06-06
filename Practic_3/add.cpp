@@ -1,13 +1,16 @@
 #include "add.h"
 #include "ui_add.h"
+#include "Structure.h"
 #include "mainwindow.h"
-#include <QMessageBox>
+#include <QFile>
+#include <QDataStream>
 
 Add::Add(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Add)
 {
     ui->setupUi(this);
+    setWindowTitle("Базар");
 }
 
 Add::~Add()
@@ -15,35 +18,40 @@ Add::~Add()
     delete ui;
 }
 
+
+QDataStream & operator << ( QDataStream & out, const Product & p )
+{
+  out << p.name;
+  out << p.provider;
+  out << p.quantity;
+  out << p.price;
+  return out;
+}
+
+
 void Add::on_AddButton_clicked(bool checked) {
-    Product record;
-    FILE *fil;
-    record.name = ui->NameEdit->text();
-    record.provider = ui->ProviderEdit->text();
-    record.quantity = ui->QuantityEdit->text().toInt();
-    record.price = ui->PriceEdit->text().toInt();
+    Product r;
+    QFile fil("C:\\Users\\djafa\\source\\repos\\OOP-C-BMSTU\\Practic_3\\Market.dat");
+    fil.open(QFile::Append);
+
+    r.name = ui->NameEdit->text();
+    r.provider = ui->ProviderEdit->text();
+    r.quantity = ui->QuantityEdit->text().toFloat();
+    r.price = ui->PriceEdit->text().toFloat();
     ui->NameEdit->clear();
     ui->ProviderEdit->clear();
     ui->QuantityEdit->clear();
     ui->PriceEdit->clear();
     qDebug("Norm");
-    if (fil = fopen("C:\\Users\\djafa\\source\\repos\\OOP-C-BMSTU\\Practic_3\\Market.dat", "a+b")) {
-        qDebug("Open");
-    }
-    else {
-        fil = fopen("C:\\Users\\djafa\\source\\repos\\OOP-C-BMSTU\\Practic_3\\Market.dat", "w+b");
-    }
-    fwrite(&record, sizeof(record), 1, fil);
-    ui->NameEdit->setFocus();
+    QDataStream out(&fil);
+    out<<r.name<<r.provider<<r.quantity<<r.price;
+    fil.close();
     show_message("Продукт добавлен");
-//      record.provider := SupplierEdit.text;
-//      rec.quantity := StrToInt(QuantityEdit.text);
-//      rec.price := StrToInt(PriceEdit.text);
-//      NameEdit.clear;
-//      SupplierEdit.clear;
-//      QuantityEdit.clear;
-//      PriceEdit.clear;
-//      write(fil, rec);
-//      NameEdit.setfocus;
-//      Application.MessageBox('Продукт успешно добавлен', 'Симулятор рынка',mb_Ok);
+    ui->NameEdit->setFocus();
 }
+
+void Add::on_ExitButton_clicked(bool checked)
+{
+   qDebug("Close");
+}
+
