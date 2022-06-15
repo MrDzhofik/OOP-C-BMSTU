@@ -27,17 +27,15 @@ public:
     QPushButton *ExitButton;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout_2;
-    QWidget *verticalLayoutWidget_2;
-    QVBoxLayout *ChartLayout;
 
     void setupUi(QDialog *Histogramm)
     {
         if (Histogramm->objectName().isEmpty())
             Histogramm->setObjectName(QString::fromUtf8("Histogramm"));
-        Histogramm->resize(531, 430);
+        Histogramm->resize(230, 166);
         layoutWidget = new QWidget(Histogramm);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(440, 350, 85, 67));
+        layoutWidget->setGeometry(QRect(70, 40, 85, 67));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -57,12 +55,6 @@ public:
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        verticalLayoutWidget_2 = new QWidget(Histogramm);
-        verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(10, 10, 421, 411));
-        ChartLayout = new QVBoxLayout(verticalLayoutWidget_2);
-        ChartLayout->setObjectName(QString::fromUtf8("ChartLayout"));
-        ChartLayout->setContentsMargins(0, 0, 0, 0);
 
         retranslateUi(Histogramm);
         QObject::connect(ExitButton, SIGNAL(clicked(bool)), Histogramm, SLOT(close()));

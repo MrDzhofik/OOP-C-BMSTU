@@ -2,6 +2,7 @@
 #define HISTOGRAMM_H
 
 #include <QDialog>
+#include <QtCharts>
 
 namespace Ui {
 class Histogramm;
@@ -17,6 +18,8 @@ public:
 
 private slots:
     void on_HistogrammButton_clicked(bool checked);
+
+    void on_ExitButton_clicked(bool checked);
 
 private:
     Ui::Histogramm *ui;

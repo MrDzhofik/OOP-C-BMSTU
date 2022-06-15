@@ -56,11 +56,9 @@ AddWidget::AddWidget(QWidget *parent){
 
 
 void AddWidget::add(){ // Слот добавления
-    int num = (((this->IntEdit->text().size()) != 0)? IntEdit->text().toInt(): 0);
-    printf("%d", num);
-    QString str1 = StrEdit->text();
-    QByteArray ba = str1.toLatin1();
-    const char *st = ba.data();
+    TStNum j;
+    j.num = (((this->IntEdit->text().size()) != 0)? IntEdit->text().toInt(): 0);
+    j.st = StrEdit->text();
 //    ContainerWidget::spisok->add(1, num, st);
     IntEdit->clear();
     StrEdit->clear();

@@ -2,6 +2,8 @@
 #define ELEMENTS_H
 #include "stdio.h"
 #include "string.h"
+#include <QString>
+#include <QTextEdit>
 
 class TElem{
 public:
@@ -10,7 +12,7 @@ public:
         next = nullptr;
         prev = nullptr;
     }
-    virtual void Print() = 0;
+    virtual void Print(QTextEdit *textEdit) = 0;
     virtual ~TElem(){
         puts("Delete TElem");
     }
@@ -19,14 +21,15 @@ public:
 class TStNum: public TElem{
 public:
     int num;
-    char *st;
+    QString st;
     TStNum(){
         num = 0;
         st = nullptr;
     }
-    void Print() override{
-        printf("%d", num);
-        printf("%s", st);
+    void Print(QTextEdit *textEdit) override{
+        textEdit->setText(QString::number(num));
+        textEdit->setText(st);
+
     };
     virtual ~TStNum(){
         puts("Delete TStNum");
