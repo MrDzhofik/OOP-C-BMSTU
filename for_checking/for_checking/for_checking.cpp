@@ -511,16 +511,16 @@ using namespace std;
 //}
 //
 //int main() {
-//    /*Room f(9, 12);
+//    Room f(9, 12); // 1 случай
 //    f.Print();
 //    VRoom s(9, 12, 5);
-//    s.Print();*/
-//    /*Room* pa;
-//    VRoom s(9, 12, 5);
+//    s.Print();
+//    Room* pa;  // 2 случай
+//    VRoom s(9, 12, 5); 
 //    s.Print();
 //    pa = &s;
-//    pa->Print();*/
-//    VRoom s(9, 12, 5);
+//    pa->Print();
+//    VRoom s(9, 12, 5); // 3 случай
 //    Print(s);
 //}
 
@@ -684,50 +684,225 @@ using namespace std;
 //}
 
 
-class Number {
-private: int* pnum;
-public:
-    Number(int Num) :pnum(new int(Num)) {
-        cout << "New, Constructor" << endl;
-    }
-    Number(const Number& R) :pnum(new int(*R.pnum)) {
-        cout << "New, Constructor copy" << endl;
-    }
-    Number() :pnum(nullptr) {}
-    Number& operator=(const Number& R) {
-        if (pnum != nullptr) { delete pnum;cout << "Free" << endl; }
-        pnum = new int(*R.pnum);
-        cout << "New Operator= copy" << endl;
-        return *this;
-    }
-    ~Number() {
-        if (pnum != nullptr) { delete pnum;cout << "Free" << endl; }
-        cout << "Destructor" << endl;
-    }
-    Number(Number&& R) :pnum(R.pnum) {
-        R.pnum = nullptr; cout << "Constructor move" << endl;
-    }
-    Number& operator=(Number&& R) {
-        if (pnum != nullptr) {
-            delete pnum; cout << "Free move" << endl;
-        }
-        pnum = R.pnum;
-        R.pnum = nullptr; cout << "Operator= move" << endl;
-        return *this;
-    }
-};
+//class Number {
+//private: int* pnum;
+//public:
+//    Number(int Num) :pnum(new int(Num)) {
+//        cout << "New, Constructor" << endl;
+//    }
+//    Number(const Number& R) :pnum(new int(*R.pnum)) {
+//        cout << "New, Constructor copy" << endl;
+//    }
+//    Number() :pnum(nullptr) {}
+//    Number& operator=(const Number& R) {
+//        if (pnum != nullptr) { delete pnum;cout << "Free" << endl; }
+//        pnum = new int(*R.pnum);
+//        cout << "New Operator= copy" << endl;
+//        return *this;
+//    }
+//    ~Number() {
+//        if (pnum != nullptr) { delete pnum;cout << "Free" << endl; }
+//        cout << "Destructor" << endl;
+//    }
+//    Number(Number&& R) :pnum(R.pnum) {
+//        R.pnum = nullptr; cout << "Constructor move" << endl;
+//    }
+//    Number& operator=(Number&& R) {
+//        if (pnum != nullptr) {
+//            delete pnum; cout << "Free move" << endl;
+//        }
+//        pnum = R.pnum;
+//        R.pnum = nullptr; cout << "Operator= move" << endl;
+//        return *this;
+//    }
+//};
+//
+//Number f(int a, int b) {
+//    Number temp(a + b);
+//    return Number(move(temp));
+//}
+//
+//int main() {
+//    Number A(5);
+//    Number B(A);
+//    Number C(move(A));
+//    Number D(6);
+//    D = move(A);
+//    Number F = f(6, 7);
+//    return 0;
+//}
 
-Number f(int a, int b) {
-    Number temp(a + b);
-    return Number(move(temp));
-}
 
-int main() {
-    Number A(5);
-    Number B(A);
-    Number C(move(A));
-    Number D(6);
-    D = move(A);
-    Number F = f(6, 7);
-    return 0;
-}
+//int main() {
+//    int a = 4;
+//    int c = 1024;
+//    int b = c << a;
+//    cout << b;
+//}
+
+
+//#include <string.h>
+//#include <stdio.h>
+//int main() {
+//    char str[] = "A string\tof ,,tokens\nand some more tokens";
+//    char seps[] = " ,\t\n", * token, * nexttoken;
+//
+//    token = strtok_s(str, seps, &nexttoken);
+//    while (token != nullptr)
+//    {
+//        printf("%s ", token);
+//        token = strtok_s(nullptr, seps, &nexttoken);
+//    }
+//    return 0;
+//}
+
+
+//#include <iostream>
+//class HomePhone {
+//protected:
+//    int yearprod, cost;
+//public:
+//    HomePhone(int ayp, int ac) : yearprod(ayp), cost(ac) {}
+//    void about() { std::cout << yearprod << "," << cost << std::endl; }
+//};
+//class MobilePhone : protected HomePhone {
+//    int charge;
+//public:
+//    MobilePhone(int ayp, int ac, int acharge) : HomePhone(ayp, ac), charge(acharge) {}
+//    void newabout() { std::cout << yearprod << "," << cost << "," << charge << std::endl; }
+//};
+//int main() {
+//    HomePhone A(1995, 2500);
+//    A.about();
+//    MobilePhone B(2020, 120000, 95);
+//    //B.about();
+//    B.newabout();
+//    return 0;
+//}
+
+#include <stdio.h>
+//class TNum
+//{
+//public:	int* pn;
+//      TNum(int n) { puts("new pn"); pn = new int(n); }
+//      TNum(const TNum& Obj)
+//      {
+//          puts("copy new pn"); pn = new int(*Obj.pn);
+//      }
+//      ~TNum() { puts("delete pn"); delete pn; }
+//};
+//
+//void Print(TNum b) { 
+//    printf("%d ", *b.pn);
+//}
+//
+//int main() {
+//    TNum A(1);
+//    Print(A);
+//    return 0;
+//}
+
+
+
+//#include <string.h>
+//#include <iostream>
+//class movez;
+//class child {
+//    char name[16];
+//    int age;
+//public:
+//    child(const char* n, int c);
+//    friend int sameage(child a, child b);
+//    friend movez;
+//};
+//
+//child::child(const char* n, int c)
+//{
+//    strcpy_s(name, 16, n);
+//    age = c;
+//}
+//
+//class movez
+//{
+//public:
+//    void grow(child& obj, int num);
+//};
+//
+//void movez::grow(child& obj, int num)
+//{
+//    obj.age += num;
+//};
+//
+//int sameage(child a, child b)
+//{
+//    if (a.age == b.age) {
+//        return 1;
+//    }
+//    return 0;
+//};
+//
+//int main()
+//{
+//    child e("Egor", 4);
+//    child m("Masha", 5);
+//    movez curr;
+//    curr.grow(e, 2);
+//    curr.grow(m, 1);
+//    cout << sameage(e, m);
+//    return 0;
+//};
+
+
+//#include <iostream>;
+//using namespace std;
+//
+//int main()
+//{
+//    setlocale(LC_ALL, "rus");
+//
+//    int num1;
+//    int num2;
+//    int var = 2;
+//
+//    while (var--)
+//    {
+//        cout << "Введите значение num1: ";
+//        cin >> num1;
+//        cout << "Введите значение num2: ";
+//        cin >> num2;
+//
+//        cout << "num1 + num2 = " << num1 + num2 << endl;
+//        cout << "num1 / num2 = ";
+//
+//        try //код, который может привести к ошибке, располагается тут
+//        {
+//            if (num2 == 0)
+//            {
+//                throw 123; //генерировать целое число 123
+//            }
+//            cout << num1 / num2 << endl;
+//        }
+//        catch (int i)//сюда передастся число 123
+//        {
+//            cout << "Ошибка №" << i << " - на 0 делить нельзя!!!!" << endl;
+//        }
+//
+//        cout << "num1 - num2 = " << num1 - num2 << endl;
+//        cout << "=================================" << endl << endl;
+//    }
+//
+//    cout << "Программа завершила работу!" << endl << endl;;
+//
+//    return 0;
+//}
+
+//int main() {
+//    int arr[5][5] = { {0, 2, 4, 6, 8}, {1, 3, 5, 7}, {10, 12, 14, 16, 18}, {9, 11, 13, 15, 17}, {20, 21, 22, 23, 24} };
+//    for (int i = 0; i < 5; i++) {
+//        cout << (*(arr + i) + i) << endl;
+//        cout << (arr + i) << endl;
+//        cout << **(arr + i) << endl;
+//    }
+//}
+
+
